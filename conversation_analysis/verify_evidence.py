@@ -33,6 +33,12 @@ def verify(corpus: list[dict], ledger: list[dict]) -> int:
         quote = item.get('quote')
         if not isinstance(quote, str) or not quote.strip() or quote not in turn['text']:
             raise ValueError('Quote is not an exact nonempty source span.')
+        if 'quote_start' in item or 'quote_end' in item:
+            start, end = item.get('quote_start'), item.get('quote_end')
+            if (type(start) is not int or type(end) is not int or
+                    start < 0 or end <= start or end > len(turn['text']) or
+                    turn['text'][start:end] != quote):
+                raise ValueError('Quote offsets do not identify the exact source span.')
     return len(ledger)
 
 

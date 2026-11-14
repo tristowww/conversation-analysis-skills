@@ -67,6 +67,20 @@ class EvidenceTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             verify(self.corpus, ledger)
 
+    def test_valid_offsets_accepted(self):
+        ledger = copy.deepcopy(self.ledger)
+        turn = self.corpus[0]['turns'][1]['text']
+        ledger[0]['quote_start'] = turn.index(ledger[0]['quote'])
+        ledger[0]['quote_end'] = ledger[0]['quote_start'] + len(ledger[0]['quote'])
+        self.assertEqual(verify(self.corpus, ledger), 10)
+
+    def test_wrong_or_incomplete_offsets_rejected(self):
+        for start, end in [(1, 2), (-1, 5), (0, 100000), (0, None), (False, 5)]:
+            ledger = copy.deepcopy(self.ledger)
+            ledger[0]['quote_start'], ledger[0]['quote_end'] = start, end
+            with self.assertRaisesRegex(ValueError, 'offsets'):
+                verify(self.corpus, ledger)
+
     def test_unknown_locator_rejected(self):
         ledger = copy.deepcopy(self.ledger)
         ledger[0]['conversation_id'] = 'unknown'

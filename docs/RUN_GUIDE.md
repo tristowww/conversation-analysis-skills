@@ -6,6 +6,15 @@ Run `python -m conversation_analysis.prepare --download` from the repository roo
 
 The scripts use Python's standard library and make no model calls. Use a file-capable assistant or analyst of your choice. Check the data handling of any service before supplying its transcript input; these scripts do not authorize or perform that transfer.
 
+To reproduce the checks for the committed [real-interview walkthrough](../examples/ANTHROPIC_WORKED_EXAMPLE.md), run:
+
+```bash
+python scripts/check_anthropic_example.py
+python -m conversation_analysis.verify_evidence --corpus .local-data/prepared.jsonl --ledger examples/anthropic-evidence.json
+```
+
+The walkthrough uses the first record in each cohort, selected before reading, and applies all seven skills to those three complete interviews. Its coding and narrative are authored with AI assistance; the scripts verify source integrity and evidence, not the interpretations. The code does not regenerate qualitative prose or demonstrate model reproducibility.
+
 ## 2. Choose one question and skill
 
 Start with one capability. For a first public-data analysis, a suitable question is: "How do participants describe the benefits and limitations of using AI in their work?" Pair it with `skills/topic-analysis/SKILL.md` or narrow it to an explicit target for sentiment analysis.
@@ -39,4 +48,4 @@ This checks exact quotation and speaker/turn attribution. It does not check clai
 
 A future comparison can give the same corpus, question, output request, model, and tool access to fresh tasks, with and without one skill. Freeze the task and review rubric before collecting outputs. Record settings, errors, retries, time, and actual usage where available. Ask an independent reviewer to assess blinded outputs and inspect disagreements.
 
-That is a proposed evaluation design. This repository's initial release does not include those runs, independent judgments, or evidence of improvement. Combining multiple skills would require its own evaluation.
+That is a proposed evaluation design. This repository includes a real-data worked walkthrough, but no matched comparison runs, independent judgments, or evidence of improvement. The walkthrough combines skills for explanation; the value of that combination remains untested.

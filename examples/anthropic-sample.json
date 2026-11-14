@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-13",
+  "source_revision": "c9e1ec1e6b093712b9c42235c7303ece647490e9",
+  "selection_rule": "First data row (source_row=1) in each pinned source CSV: workforce, creatives, scientists. Selected before substantive content review.",
+  "scope": "Three complete interviews; convenience demonstration, not representative or a saturation claim.",
+  "question": "How do these participants describe AI uses, evaluations, constraints, and desired changes? What do adjacent interviewer turns contribute to interpreting their answers?",
+  "skills": [
+    "actionability-analysis",
+    "conversation-editorial",
+    "evidence-synthesis",
+    "interviewer-interaction-analysis",
+    "respondent-intent-analysis",
+    "sentiment-analysis",
+    "topic-analysis"
+  ],
+  "selected": [
+    {
+      "conversation_id": "workforce:work_0000",
+      "cohort": "workforce",
+      "source_row": 1,
+      "source_transcript_sha256": "23af9224987c103a86a2a51906c05f81d8f30950bedb39219038b36648c9eebf",
+      "turns": 27
+    },
+    {
+      "conversation_id": "creatives:creativity_0000",
+      "cohort": "creatives",
+      "source_row": 1,
+      "source_transcript_sha256": "61368914df13e8a4876801e1276e4e48dbd800659519426fc7e3d1bd08228a87",
+      "turns": 21
+    },
+    {
+      "conversation_id": "scientists:science_0000",
+      "cohort": "scientists",
+      "source_row": 1,
+      "source_transcript_sha256": "2b92e105935f61c8f07fcd2a80c8d9f0886582d579d5cbef353a0595220b7847",
+      "turns": 21
+    }
+  ],
+  "authorship": "AI-assisted qualitative interpretation in the current Codex authoring session. No independent human ratings or baseline comparison.",
+  "publication": "Selected short quotations, public source-record locators, transcript hashes, and AI-assisted interpretations. Full transcripts stay local.",
+  "review_status": "Source quotations, attribution, offsets, and record hashes checked programmatically; interpretation reviewed within the same authoring session, not independently rated."
+}

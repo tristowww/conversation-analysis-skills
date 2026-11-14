@@ -12,13 +12,15 @@ The download code pins revision `c9e1ec1e6b093712b9c42235c7303ece647490e9` and v
 
 The dataset card's license section specifies **CC-BY for data and MIT for code**. Its generic metadata header says MIT. This project follows the specific data statement; the card does not specify a CC-BY version, so none is assigned here. The source dataset's license does not automatically license this project's independently authored code or instructions.
 
-Changes in this project: decode CSV records, recognize explicit speaker labels, preserve transcript text and hashes, add turn IDs and character offsets, and count corpus-level structural properties. No transcript content is rewritten or assigned a sentiment, topic, or intent by the preparation code. No publisher endorsement is implied.
+Changes in this project: decode CSV records, recognize explicit speaker labels, preserve transcript text and hashes, add turn IDs and character offsets, and count corpus-level structural properties. The preparation code assigns no qualitative labels. The separately authored worked analysis applies the seven skills to three complete interviews and publishes selected verbatim excerpts with new AI-assisted interpretations. These judgments do not belong to Anthropic and imply no publisher endorsement.
 
 ## Local handling
 
-Raw CSVs, exact-text prepared packages, participant identifiers, and any public-data analysis ledgers stay in ignored `.local-data/` or `.local-runs/` paths. Only the aggregate preparation audit is committed. Public availability is not a reason to infer identities or profile individual participants.
+Raw CSVs and full exact-text prepared packages stay in ignored `.local-data/` paths. Local working records stay in `.local-runs/`. The public release includes an aggregate preparation audit, a three-interview sample manifest, and 26 selected source excerpts in `examples/anthropic-evidence.json`. Public source-record IDs, turn locators, offsets, and transcript hashes make these excerpts reproducible. The public examples omit participant names, contact details, and the full interviews. Public availability is not a reason to infer identities or profile individual participants.
 
-The committed conversations and evidence quotes under `examples/` are wholly invented for this project. They are not modified, anonymized, or sampled participant records. Their example annotations are authored illustrations, not human reference ratings or an observed model run.
+The main [worked analysis](../examples/ANTHROPIC_WORKED_EXAMPLE.md) uses real source interviews. The three source rows were fixed before substantive reading: the first record of each pinned CSV. Their full 69 turns were read, and quotations were checked against the source, including speaker and character offsets. Selection is deterministic and convenient, not representative; one record per cohort does not support cohort comparisons. Interpretations are from one AI-assisted authoring session, without independent human ratings or a measured skill-versus-baseline experiment.
+
+Files prefixed `synthetic-` and `SYNTHETIC_CHECKS.md` remain wholly invented code-test examples. They are independent of the real interviews and any employee dataset.
 
 ## Parser limits
 

@@ -4,9 +4,9 @@
 
 This project separates five questions: what participants discuss, how they evaluate it, what their statements do, what the feedback supports, and how the interviewer responds. Each question has a reusable Markdown skill with an explicit output and review criteria.
 
-The public-data workflow uses [Anthropic's public Interviewer dataset](https://huggingface.co/datasets/Anthropic/AnthropicInterviewer). It downloads a pinned release, verifies checksums, preserves both speakers, and prepares source-linked turns for analysis. The worked interpretations use **invented conversations**, so you can inspect the method without publishing a participant's words.
+The worked examples apply all seven skills to **three real interviews** from [Anthropic's public Interviewer dataset](https://huggingface.co/datasets/Anthropic/AnthropicInterviewer). The first interview in each cohort was selected before reading its content. The walkthrough preserves qualifications, distinguishes interviewer language from participant evidence, and links interpretations to 26 checked source excerpts.
 
-**[Read a worked example](examples/WORKED_EXAMPLE.md)** · [Choose a skill](#analysis-skills) · [Run with public data](docs/RUN_GUIDE.md) · [Data and attribution](docs/DATA.md) · [Actual checks and limits](docs/STATUS.md)
+**[Read the real-interview examples](examples/ANTHROPIC_WORKED_EXAMPLE.md)** · [Choose a skill](#analysis-skills) · [Run with public data](docs/RUN_GUIDE.md) · [Data and attribution](docs/DATA.md) · [Actual checks and limits](docs/STATUS.md)
 
 ## Analysis skills
 
@@ -22,16 +22,23 @@ Two supporting skills cover [evidence synthesis](skills/evidence-synthesis/SKILL
 
 These are instructions for an analyst or file-capable AI assistant. Python handles data preparation and evidence checks; it does **not** assign these qualitative labels. No provider, API key, model SDK, or automatic skill installation is required.
 
-## Try the example
+## Explore the real examples
 
 Python 3.10 or later; standard library only. Run from the repository root:
+
+```bash
+python -m conversation_analysis.prepare --download
+python scripts/check_anthropic_example.py
+```
+
+Read the [walkthrough](examples/ANTHROPIC_WORKED_EXAMPLE.md), [sample manifest](examples/anthropic-sample.json), and [evidence ledger](examples/anthropic-evidence.json). All 69 turns of the three selected interviews were read. The source checker re-reads the checksummed CSVs and verifies sample selection, transcript hashes, quotations, speakers, and offsets. Interpretations are AI-assisted judgments from one authoring session, without independent human review or a baseline comparison.
+
+The original [invented boundary cases](examples/SYNTHETIC_CHECKS.md) remain as code-test examples:
 
 ```bash
 python -m unittest discover -s tests -v
 python -m conversation_analysis.verify_evidence --corpus examples/synthetic-conversations.jsonl --ledger examples/synthetic-evidence.json
 ```
-
-Then read the [synthetic worked example](examples/WORKED_EXAMPLE.md). It shows why a positive evaluation, a specific request, and a useful investigative lead need separate judgments. The accompanying ledger checks exact text and speaker attribution, not whether an interpretation is correct.
 
 ## Prepare the Anthropic interviews
 
@@ -55,10 +62,10 @@ Follow the [run guide](docs/RUN_GUIDE.md) to apply a chosen skill using your own
 - Building a reproducible bridge from a public transcript release to inspectable analysis inputs.
 - Checking quotations and attribution independently of the analyst's prose.
 
-The initial release includes a fresh full-corpus **preparation audit** and synthetic worked interpretations. It does not include a model comparison, human-coded reference set, or demonstrated improvement from using a skill. See [status and limitations](docs/STATUS.md).
+The repository includes a full-corpus **preparation audit** and real-data worked interpretations for a declared three-interview sample. Those examples do not establish population findings, a validated codebook, or improvement from using a skill. See [status and limitations](docs/STATUS.md).
 
 ## Scope and provenance
 
-This standalone portfolio edition uses general qualitative-analysis methods and public research data. It contains no employer systems, employee-feedback corpus, private prompts, or internal study protocols. The instructions, examples, and implementation were prepared with AI assistance and are offered as research prototypes. The synthetic annotations are authored illustrations, not observed model performance or independent human ratings.
+This standalone portfolio edition uses general qualitative-analysis methods and public research data. It contains no employer systems, employee-feedback corpus, private prompts, or internal study protocols. The instructions, interpretations, examples, and implementation were prepared with AI assistance and are research prototypes. The synthetic annotations remain authored test illustrations, separate from the real-interview walkthrough.
 
-Anthropic released the source interviews; this is an independent project with attribution and no claimed endorsement. Raw public transcripts and participant identifiers are not redistributed here. Data licensing is described separately in [DATA.md](docs/DATA.md); this repository does not assign a new license to the source dataset.
+Anthropic released the source interviews; this is an independent project with attribution and no claimed endorsement. The real examples publish selected short excerpts and public source-record locators. Full transcripts remain local. Data licensing and changes are described in [DATA.md](docs/DATA.md); this repository does not assign a new license to the source dataset.
