@@ -71,8 +71,8 @@
     "conversation_id": "workforce:work_0000",
     "turn_id": "t0018",
     "role": "participant",
-    "quote": "I was very satisfied because I made the most sales that month out of my whole team.",
-    "quote_start": 116,
+    "quote": "One time I used AI to develop a strategy for selling a product I wasn't familiar with and it worked extremely well. I was very satisfied because I made the most sales that month out of my whole team.",
+    "quote_start": 0,
     "quote_end": 199,
     "source_transcript_sha256": "23af9224987c103a86a2a51906c05f81d8f30950bedb39219038b36648c9eebf"
   },
@@ -82,9 +82,9 @@
     "conversation_id": "workforce:work_0000",
     "turn_id": "t0020",
     "role": "participant",
-    "quote": "I provided as much details as possible and I noticed it really made a difference.",
-    "quote_start": 51,
-    "quote_end": 132,
+    "quote": "I gave a lot of details in this specific scenario. I provided as much details as possible and I noticed it really made a difference. I also included information about myself and my personality to help the AI cater the strategy to myself as a person.",
+    "quote_start": 0,
+    "quote_end": 249,
     "source_transcript_sha256": "23af9224987c103a86a2a51906c05f81d8f30950bedb39219038b36648c9eebf"
   },
   {
@@ -148,9 +148,9 @@
     "conversation_id": "creatives:creativity_0000",
     "turn_id": "t0012",
     "role": "participant",
-    "quote": "It was fun but also it helped me refine my own perspective somewhat.",
+    "quote": "It was fun but also it helped me refine my own perspective somewhat. I was just sending through articles from the composer and suggesting other connections that might be considered.",
     "quote_start": 0,
-    "quote_end": 68,
+    "quote_end": 181,
     "source_transcript_sha256": "61368914df13e8a4876801e1276e4e48dbd800659519426fc7e3d1bd08228a87"
   },
   {
@@ -159,8 +159,8 @@
     "conversation_id": "creatives:creativity_0000",
     "turn_id": "t0014",
     "role": "participant",
-    "quote": "I don't know if these have actuated in the work yet but I imagine it's only a matter of time.",
-    "quote_start": 133,
+    "quote": "I'm honestly doing a lot my \"bucket filling\" (that's what a mentor calls it). Just digging into broad topics and synthesising ideas. I don't know if these have actuated in the work yet but I imagine it's only a matter of time.",
+    "quote_start": 0,
     "quote_end": 226,
     "source_transcript_sha256": "61368914df13e8a4876801e1276e4e48dbd800659519426fc7e3d1bd08228a87"
   },
@@ -170,8 +170,8 @@
     "conversation_id": "creatives:creativity_0000",
     "turn_id": "t0015",
     "role": "interviewer",
-    "quote": "It sounds like you're in an investment phase right now, building up this broader knowledge base that will eventually feed into your compositions.",
-    "quote_start": 49,
+    "quote": "That's a great way to put it - \"bucket filling.\" It sounds like you're in an investment phase right now, building up this broader knowledge base that will eventually feed into your compositions.",
+    "quote_start": 0,
     "quote_end": 194,
     "source_transcript_sha256": "61368914df13e8a4876801e1276e4e48dbd800659519426fc7e3d1bd08228a87"
   },
@@ -283,6 +283,127 @@
     "quote": "A tool for model transparency that can be easily understood by the medical team and also allows for the operations team to monitor for model drift.",
     "quote_start": 0,
     "quote_end": 147,
+    "source_transcript_sha256": "2b92e105935f61c8f07fcd2a80c8d9f0886582d579d5cbef353a0595220b7847"
+  },
+  {
+    "evidence_id": "W10",
+    "claim_id": "W10",
+    "conversation_id": "workforce:work_0000",
+    "turn_id": "t0010",
+    "role": "participant",
+    "quote": "I do not believe there are any tasks that AI could help with that I prefer to do myself in my line of work.",
+    "quote_start": 0,
+    "quote_end": 107,
+    "source_transcript_sha256": "23af9224987c103a86a2a51906c05f81d8f30950bedb39219038b36648c9eebf"
+  },
+  {
+    "evidence_id": "W13",
+    "claim_id": "W13",
+    "conversation_id": "workforce:work_0000",
+    "turn_id": "t0013",
+    "role": "interviewer",
+    "quote": "Are you more likely to go back and forth with it throughout figuring out the pitch, or do you tend to give it all the context upfront and let it handle the task independently?",
+    "quote_start": 173,
+    "quote_end": 348,
+    "source_transcript_sha256": "23af9224987c103a86a2a51906c05f81d8f30950bedb39219038b36648c9eebf"
+  },
+  {
+    "evidence_id": "W16",
+    "claim_id": "W16",
+    "conversation_id": "workforce:work_0000",
+    "turn_id": "t0016",
+    "role": "participant",
+    "quote": "My colleagues have influenced the way I use AI because I tend to use it more often when I need to \"compete\" with them. If my sales for the month are low compared to them, I tend to turn to AI for help.",
+    "quote_start": 0,
+    "quote_end": 201,
+    "source_transcript_sha256": "23af9224987c103a86a2a51906c05f81d8f30950bedb39219038b36648c9eebf"
+  },
+  {
+    "evidence_id": "W19",
+    "claim_id": "W19",
+    "conversation_id": "workforce:work_0000",
+    "turn_id": "t0019",
+    "role": "interviewer",
+    "quote": "That sounds like a great success! What made that AI-generated strategy work so well compared to other times you've used it? Was there something different about how you approached it or the situation itself?",
+    "quote_start": 0,
+    "quote_end": 206,
+    "source_transcript_sha256": "23af9224987c103a86a2a51906c05f81d8f30950bedb39219038b36648c9eebf"
+  },
+  {
+    "evidence_id": "W22",
+    "claim_id": "W22",
+    "conversation_id": "workforce:work_0000",
+    "turn_id": "t0022",
+    "role": "participant",
+    "quote": "I've thought about it a bit but I prefer to work with AI and use it to better myself instead of competing.",
+    "quote_start": 0,
+    "quote_end": 106,
+    "source_transcript_sha256": "23af9224987c103a86a2a51906c05f81d8f30950bedb39219038b36648c9eebf"
+  },
+  {
+    "evidence_id": "W25",
+    "claim_id": "W25",
+    "conversation_id": "workforce:work_0000",
+    "turn_id": "t0025",
+    "role": "interviewer",
+    "quote": "Before we wrap up, is there anything else about your experience with AI in your work that you think would be valuable for us to know? Something we haven't covered yet?",
+    "quote_start": 352,
+    "quote_end": 519,
+    "source_transcript_sha256": "23af9224987c103a86a2a51906c05f81d8f30950bedb39219038b36648c9eebf"
+  },
+  {
+    "evidence_id": "C11",
+    "claim_id": "C11",
+    "conversation_id": "creatives:creativity_0000",
+    "turn_id": "t0011",
+    "role": "interviewer",
+    "quote": "Who or what is driving the creative insights and analysis?",
+    "quote_start": 248,
+    "quote_end": 306,
+    "source_transcript_sha256": "61368914df13e8a4876801e1276e4e48dbd800659519426fc7e3d1bd08228a87"
+  },
+  {
+    "evidence_id": "C13",
+    "claim_id": "C13",
+    "conversation_id": "creatives:creativity_0000",
+    "turn_id": "t0013",
+    "role": "interviewer",
+    "quote": "What aspects of your creative work have changed the most since you started using AI?",
+    "quote_start": 142,
+    "quote_end": 226,
+    "source_transcript_sha256": "61368914df13e8a4876801e1276e4e48dbd800659519426fc7e3d1bd08228a87"
+  },
+  {
+    "evidence_id": "S09",
+    "claim_id": "S09",
+    "conversation_id": "scientists:science_0000",
+    "turn_id": "t0009",
+    "role": "interviewer",
+    "quote": "What made you think the AI approach would be better for this particular aspect of your study?",
+    "quote_start": 329,
+    "quote_end": 422,
+    "source_transcript_sha256": "2b92e105935f61c8f07fcd2a80c8d9f0886582d579d5cbef353a0595220b7847"
+  },
+  {
+    "evidence_id": "S15",
+    "claim_id": "S15",
+    "conversation_id": "scientists:science_0000",
+    "turn_id": "t0015",
+    "role": "interviewer",
+    "quote": "When you did use AI for the propensity scoring and feature correlation work, how did you go about verifying or validating what the AI was producing? How did you make sure those results were reliable for your study?",
+    "quote_start": 289,
+    "quote_end": 503,
+    "source_transcript_sha256": "2b92e105935f61c8f07fcd2a80c8d9f0886582d579d5cbef353a0595220b7847"
+  },
+  {
+    "evidence_id": "S17",
+    "claim_id": "S17",
+    "conversation_id": "scientists:science_0000",
+    "turn_id": "t0017",
+    "role": "interviewer",
+    "quote": "if you could wave a magic wand and have AI help with one aspect of your research work that it currently doesn't - whether in this project or your research more broadly - what would that be and why?",
+    "quote_start": 109,
+    "quote_end": 306,
     "source_transcript_sha256": "2b92e105935f61c8f07fcd2a80c8d9f0886582d579d5cbef353a0595220b7847"
   }
 ]

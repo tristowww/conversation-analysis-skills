@@ -1,0 +1,66 @@
+{
+  "method": "Participant message words; inclusive quartiles within cohort; strictly above Q3 + 1.5 * IQR.",
+  "tokenizer": "\\b\\w+(?:['\\u2019]\\w+)*\\b",
+  "conversations": 1250,
+  "participant_messages": 14495,
+  "zero_word_slots_retained": true,
+  "cohorts": {
+    "creatives": {
+      "participant_messages": 1259,
+      "zero_word_messages": 1,
+      "q1_words": 28.0,
+      "median_words": 69.0,
+      "q3_words": 110.0,
+      "upper_fence_words": 233.0,
+      "messages_above_upper_fence": 32
+    },
+    "scientists": {
+      "participant_messages": 1160,
+      "zero_word_messages": 0,
+      "q1_words": 25.0,
+      "median_words": 58.0,
+      "q3_words": 101.0,
+      "upper_fence_words": 215.0,
+      "messages_above_upper_fence": 34
+    },
+    "workforce": {
+      "participant_messages": 12076,
+      "zero_word_messages": 2,
+      "q1_words": 26.0,
+      "median_words": 53.0,
+      "q3_words": 87.0,
+      "upper_fence_words": 178.5,
+      "messages_above_upper_fence": 443
+    }
+  },
+  "selected_interviews": [
+    {
+      "conversation_id": "workforce:work_0000",
+      "cohort": "workforce",
+      "participant_messages": 13,
+      "maximum_words": 46,
+      "upper_fence_flags": []
+    },
+    {
+      "conversation_id": "creatives:creativity_0000",
+      "cohort": "creatives",
+      "participant_messages": 10,
+      "maximum_words": 50,
+      "upper_fence_flags": []
+    },
+    {
+      "conversation_id": "scientists:science_0000",
+      "cohort": "scientists",
+      "participant_messages": 10,
+      "maximum_words": 47,
+      "upper_fence_flags": []
+    }
+  ],
+  "limits": [
+    "Descriptive review flags, not errors or engagement/quality labels.",
+    "Turns are dependent within interviews; no significance tests are performed.",
+    "Question function and turn position are not matched by this simple screen.",
+    "Only the three selected interviews received qualitative reading; length screening does not extend semantic coverage."
+  ],
+  "source_revision": "c9e1ec1e6b093712b9c42235c7303ece647490e9"
+}

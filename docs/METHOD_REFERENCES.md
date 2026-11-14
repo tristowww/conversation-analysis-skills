@@ -1,0 +1,14 @@
+# Grounding for the additional skills
+
+These sources inform distinctions in the instructions. They do not validate this repository's skills, labels, worked interpretations, or numerical screening rule.
+
+- **Behavioral and linguistic adaptation:** Vanderlyn and Vu (2025), [study of behavioral versus linguistic adaptation in task-oriented chatbots](https://aclanthology.org/2025.coling-main.410/). The study examines these forms of adaptation separately. This repository likewise distinguishes reuse of language from how an agent responds to a user's needs. The worked examples observe local sequences; they do not estimate adaptation's effect on rapport or success.
+- **Saturation:** Saunders et al. (2018), [conceptualization and operationalization of saturation](https://pmc.ncbi.nlm.nih.gov/articles/PMC5993836/). The paper distinguishes multiple meanings and levels of saturation. Here, the skill tracks relevant additions and qualifications within one conversation. It does not establish that a different question would yield nothing new, or that a dataset has reached thematic saturation.
+- **Research contribution:** Ivey, Field, and Xiao (2026), [empirical analysis of quality in qualitative interviews](https://arxiv.org/abs/2604.05163). Their study examines response characteristics against contribution to research findings and reports strong relevance of the study question. This supports examining contribution rather than relying on fluent or lengthy answers. It does not validate our coverage categories or establish that a cited answer is true.
+- **Goals for the public-data example:** Handa et al. (2025), [Anthropic Interviewer research article, Research goals](https://www.anthropic.com/research/anthropic-interviewer#research-goals). Its workforce goal concerns integration, use patterns, preferences, and interaction styles; the creative goal concerns processes, experiences, and future roles; the scientist goal concerns research workflows, value, trust, and barriers. The worked matrix paraphrases these public goals. Its narrower questions are analyst-authored, not an undisclosed publisher rubric.
+
+## Declared numerical convention
+
+The optional length screen counts participant-message words, separately by publisher cohort, using the regex recorded with its output. It uses inclusive quartiles and flags counts strictly above `Q3 + 1.5 * (Q3 - Q1)`. This familiar exploratory convention was chosen before computing this release's diagnostic. It is a review screen, not a validated classifier or an automatic exclusion rule. Zero-word response slots are retained; no significance test assumes that turns are independent. Question function and turn position are not controlled by this simple screen.
+
+Qualitative contrasting-case review is separate: it tests whether an interpretation survives an example that challenges it. It need not involve an unusual numerical value, and it does not establish population rarity.

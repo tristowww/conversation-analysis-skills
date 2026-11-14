@@ -2,7 +2,7 @@
 
 Three participants describe useful applications of AI alongside output limitations, uncertainty, or unmet needs. Their accounts refer to sales-strategy generation, creative exploration and mixing tools, and machine-learning scoring. Those differences matter when interpreting a shared label such as "AI."
 
-This is an **AI-assisted qualitative walkthrough of three real interviews**, applying the repository's seven skills in one authoring session. It demonstrates the methods with source checks. The interpretations have not received independent human review.
+This is an **AI-assisted qualitative walkthrough of three real interviews**, applying the first seven skills on November 13, 2026. The [four additional worked examples](ADVANCED_ANTHROPIC_EXAMPLES.md) apply agent-user matching, conversational saturation, outlier review, and research-question coverage to the same interviews on November 14. The interpretations have not received independent human review.
 
 ## Sources and selection
 
@@ -106,6 +106,6 @@ python scripts/check_anthropic_example.py
 python -m conversation_analysis.verify_evidence --corpus .local-data/prepared.jsonl --ledger examples/anthropic-evidence.json
 ```
 
-The checks verify source-file checksums, first-row selection, transcript hashes, 26 quoted passages, speaker attribution, and quote offsets. They do not independently validate the interpretations. The original [synthetic boundary cases](SYNTHETIC_CHECKS.md) remain as code-test examples.
+The checks verify source-file checksums, first-row selection, transcript hashes, 37 quoted passages across both walkthroughs, speaker attribution, and quote offsets. They do not independently validate the interpretations. The original [synthetic boundary cases](SYNTHETIC_CHECKS.md) remain as code-test examples.
 
 **Attribution:** Selected excerpts from Anthropic Interviewer, Handa et al. (2025), under the source card's CC-BY data statement (version unstated). See [data provenance and changes](../docs/DATA.md) and the [official research article](https://www.anthropic.com/research/anthropic-interviewer). Analysis and coding are newly authored with AI assistance; no publisher endorsement or independent human review is claimed.

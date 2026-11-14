@@ -10,10 +10,11 @@ To reproduce the checks for the committed [real-interview walkthrough](../exampl
 
 ```bash
 python scripts/check_anthropic_example.py
+python scripts/summarize_response_lengths.py --check
 python -m conversation_analysis.verify_evidence --corpus .local-data/prepared.jsonl --ledger examples/anthropic-evidence.json
 ```
 
-The walkthrough uses the first record in each cohort, selected before reading, and applies all seven skills to those three complete interviews. Its coding and narrative are authored with AI assistance; the scripts verify source integrity and evidence, not the interpretations. The code does not regenerate qualitative prose or demonstrate model reproducibility.
+The [two walkthroughs](../examples/ADVANCED_ANTHROPIC_EXAMPLES.md) use the first record in each cohort, selected before reading, and apply all 11 skills to those three complete interviews. Their coding and narrative are authored with AI assistance; the scripts verify source integrity and evidence, not the interpretations. The length script separately reproduces numeric cohort aggregates and selected-case flags from all interviews. Run it without `--check` to regenerate its JSON after intentional methodological changes. It does not assign semantic outlier labels. The code does not regenerate qualitative prose or demonstrate model reproducibility.
 
 ## 2. Choose one question and skill
 

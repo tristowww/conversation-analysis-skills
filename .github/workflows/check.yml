@@ -19,4 +19,5 @@ jobs:
           python-version: '3.11'
       - run: python -m conversation_analysis.prepare --download
       - run: python scripts/check_anthropic_example.py
+      - run: python scripts/summarize_response_lengths.py --check
       - run: python -m conversation_analysis.verify_evidence --corpus .local-data/prepared.jsonl --ledger examples/anthropic-evidence.json

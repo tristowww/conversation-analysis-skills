@@ -2,11 +2,11 @@
 
 **How can an AI-assisted analyst study a conversation without losing who said what, the surrounding context, or the limits of the evidence?**
 
-This project separates five questions: what participants discuss, how they evaluate it, what their statements do, what the feedback supports, and how the interviewer responds. Each question has a reusable Markdown skill with an explicit output and review criteria.
+This project provides **11 reusable Markdown skills** for studying participant accounts, interviewer behavior, and what a conversation supports us in concluding. Each skill defines its question, output, and review limits.
 
-The worked examples apply all seven skills to **three real interviews** from [Anthropic's public Interviewer dataset](https://huggingface.co/datasets/Anthropic/AnthropicInterviewer). The first interview in each cohort was selected before reading its content. The walkthrough preserves qualifications, distinguishes interviewer language from participant evidence, and links interpretations to 26 checked source excerpts.
+The worked examples apply all 11 skills to **three real interviews** from [Anthropic's public Interviewer dataset](https://huggingface.co/datasets/Anthropic/AnthropicInterviewer). The first interview in each cohort was selected before reading its content. The walkthroughs preserve qualifications, distinguish interviewer language from participant evidence, and link interpretations to 37 checked source excerpts. A separate numerical length screen uses the full public corpus without extending the qualitative sample.
 
-**[Read the real-interview examples](examples/ANTHROPIC_WORKED_EXAMPLE.md)** · [Choose a skill](#analysis-skills) · [Run with public data](docs/RUN_GUIDE.md) · [Data and attribution](docs/DATA.md) · [Actual checks and limits](docs/STATUS.md)
+**[Read the first seven examples](examples/ANTHROPIC_WORKED_EXAMPLE.md)** · [Matching, saturation, outliers, and coverage](examples/ADVANCED_ANTHROPIC_EXAMPLES.md) · [Choose a skill](#analysis-skills) · [Run with public data](docs/RUN_GUIDE.md) · [Data and attribution](docs/DATA.md)
 
 ## Analysis skills
 
@@ -17,6 +17,10 @@ The worked examples apply all seven skills to **three real interviews** from [An
 | [Respondent intent](skills/respondent-intent-analysis/SKILL.md) | Is the participant describing, questioning, praising, objecting, or requesting something? |
 | [Actionability](skills/actionability-analysis/SKILL.md) | What response or investigation does the information support, and what is missing? |
 | [Interviewer interaction](skills/interviewer-interaction-analysis/SKILL.md) | What does the interviewer do, and how does the participant respond in the next turn? |
+| [Agent-user behavioral matching](skills/agent-user-behavioral-matching/SKILL.md) | Does either partner adapt to the other's language, preferences, or expressed needs, and is the meaning preserved? |
+| [Conversational saturation](skills/conversational-saturation/SKILL.md) | What relevant information do later turns add, and where does repetition or explicit closure appear? |
+| [Outliers and contrasting cases](skills/outlier-analysis/SKILL.md) | Which measurements merit review, or which cases challenge a proposed interpretation? |
+| [Research-question coverage](skills/research-question-coverage/SKILL.md) | What evidence does the interview contribute to the stated research questions, and what remains unresolved? |
 
 Two supporting skills cover [evidence synthesis](skills/evidence-synthesis/SKILL.md) across conversations and a [conversation editorial](skills/conversation-editorial/SKILL.md) for a source-linked prose account of one interview.
 
@@ -29,9 +33,12 @@ Python 3.10 or later; standard library only. Run from the repository root:
 ```bash
 python -m conversation_analysis.prepare --download
 python scripts/check_anthropic_example.py
+python scripts/summarize_response_lengths.py --check
 ```
 
-Read the [walkthrough](examples/ANTHROPIC_WORKED_EXAMPLE.md), [sample manifest](examples/anthropic-sample.json), and [evidence ledger](examples/anthropic-evidence.json). All 69 turns of the three selected interviews were read. The source checker re-reads the checksummed CSVs and verifies sample selection, transcript hashes, quotations, speakers, and offsets. Interpretations are AI-assisted judgments from one authoring session, without independent human review or a baseline comparison.
+Read the [original walkthrough](examples/ANTHROPIC_WORKED_EXAMPLE.md), [four additional examples](examples/ADVANCED_ANTHROPIC_EXAMPLES.md), [sample manifest](examples/anthropic-sample.json), and [evidence ledger](examples/anthropic-evidence.json). All 69 turns of the three selected interviews were read. The source checker re-reads the checksummed CSVs and verifies sample selection, transcript hashes, quotations, speakers, and offsets. Interpretations were authored with AI assistance on November 13–14, 2026, without independent human review or a baseline comparison.
+
+The [length diagnostic](results/response-length-review.json) screens all 14,495 participant-message slots using a declared rule within each cohort. It flags measurements for possible review, not poor engagement or bad data. None of the three selected interviews has a message above its cohort's upper fence; meaningful countercases in the qualitative examples remain worth inspecting.
 
 The original [invented boundary cases](examples/SYNTHETIC_CHECKS.md) remain as code-test examples:
 
