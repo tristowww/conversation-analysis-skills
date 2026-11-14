@@ -1,0 +1,12 @@
+name: Code and synthetic evidence checks
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -v
+      - run: python -m conversation_analysis.verify_evidence --corpus examples/synthetic-conversations.jsonl --ledger examples/synthetic-evidence.json

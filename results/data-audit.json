@@ -1,0 +1,65 @@
+{
+  "dataset": "Anthropic/AnthropicInterviewer",
+  "revision": "c9e1ec1e6b093712b9c42235c7303ece647490e9",
+  "scope": "Source integrity and structural preparation only; no qualitative labels.",
+  "cohorts": {
+    "workforce": {
+      "conversations": 1000,
+      "messages": 25152,
+      "participant_messages": 12076,
+      "interviewer_messages": 13076,
+      "empty_messages": 12,
+      "empty_participant_messages": 0,
+      "conversations_with_consecutive_same_role": 0
+    },
+    "creatives": {
+      "conversations": 125,
+      "messages": 2643,
+      "participant_messages": 1259,
+      "interviewer_messages": 1384,
+      "empty_messages": 4,
+      "empty_participant_messages": 0,
+      "conversations_with_consecutive_same_role": 0
+    },
+    "scientists": {
+      "conversations": 125,
+      "messages": 2445,
+      "participant_messages": 1160,
+      "interviewer_messages": 1285,
+      "empty_messages": 1,
+      "empty_participant_messages": 0,
+      "conversations_with_consecutive_same_role": 0
+    }
+  },
+  "sources": [
+    {
+      "cohort": "workforce",
+      "sha256": "09ff307d42ebc8ed0b0ba25f41ffe2e50e9baa0b3c1ab4133ee528118817aab4",
+      "bytes": 9251048,
+      "url": "https://huggingface.co/datasets/Anthropic/AnthropicInterviewer/resolve/c9e1ec1e6b093712b9c42235c7303ece647490e9/interview_transcripts/workforce_transcripts.csv"
+    },
+    {
+      "cohort": "creatives",
+      "sha256": "d4e865b9959671990ceb51089c7494dbeed7560f9a623da873e6eb0f1b6506b4",
+      "bytes": 1116650,
+      "url": "https://huggingface.co/datasets/Anthropic/AnthropicInterviewer/resolve/c9e1ec1e6b093712b9c42235c7303ece647490e9/interview_transcripts/creatives_transcripts.csv"
+    },
+    {
+      "cohort": "scientists",
+      "sha256": "338677e4a4ec17824cb5bfbc9242c8a37e7041157d34fb65e7e6fb58ea3f407a",
+      "bytes": 1066693,
+      "url": "https://huggingface.co/datasets/Anthropic/AnthropicInterviewer/resolve/c9e1ec1e6b093712b9c42235c7303ece647490e9/interview_transcripts/scientists_transcripts.csv"
+    }
+  ],
+  "parser_limits": [
+    "A line-start speaker label inside a quoted response can be ambiguous.",
+    "Structural checks do not establish speaker accuracy or substantive validity."
+  ],
+  "conversations": 1250,
+  "messages": 30240,
+  "participant_messages": 14495,
+  "interviewer_messages": 15745,
+  "empty_messages": 17,
+  "duplicate_conversation_ids": 0,
+  "exact_turn_spans_verified": true
+}

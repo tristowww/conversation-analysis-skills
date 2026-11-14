@@ -1,0 +1,72 @@
+[
+  {
+    "claim_id": "T1",
+    "conversation_id": "synthetic-01",
+    "turn_id": "t0002",
+    "role": "participant",
+    "quote": "I use it for first drafts of routine emails."
+  },
+  {
+    "claim_id": "S1",
+    "conversation_id": "synthetic-01",
+    "turn_id": "t0002",
+    "role": "participant",
+    "quote": "It saves me time, but I still check every name and number."
+  },
+  {
+    "claim_id": "I1",
+    "conversation_id": "synthetic-01",
+    "turn_id": "t0004",
+    "role": "participant",
+    "quote": "A one-page guide from IT showing which kinds of information we can put into the tool would help."
+  },
+  {
+    "claim_id": "A1",
+    "conversation_id": "synthetic-02",
+    "turn_id": "t0002",
+    "role": "participant",
+    "quote": "Yesterday it changed the column names in a spreadsheet formula. I spent an hour finding the mismatch."
+  },
+  {
+    "claim_id": "A1",
+    "conversation_id": "synthetic-02",
+    "turn_id": "t0004",
+    "role": "participant",
+    "quote": "I do not have a proposed solution. I can show someone the original file and the formula it gave me."
+  },
+  {
+    "claim_id": "X1",
+    "conversation_id": "synthetic-01",
+    "turn_id": "t0005",
+    "role": "interviewer",
+    "quote": "So you want AI to take over writing all your emails?"
+  },
+  {
+    "claim_id": "X1",
+    "conversation_id": "synthetic-01",
+    "turn_id": "t0006",
+    "role": "participant",
+    "quote": "No. I want to keep reviewing them. My question is what information I can safely include."
+  },
+  {
+    "claim_id": "A2",
+    "conversation_id": "synthetic-03",
+    "turn_id": "t0002",
+    "role": "participant",
+    "quote": "We should fix AI."
+  },
+  {
+    "claim_id": "X2",
+    "conversation_id": "synthetic-03",
+    "turn_id": "t0004",
+    "role": "participant",
+    "quote": "I would rather skip that question and stop here."
+  },
+  {
+    "claim_id": "X2",
+    "conversation_id": "synthetic-03",
+    "turn_id": "t0005",
+    "role": "interviewer",
+    "quote": "Understood. Thank you for your time."
+  }
+]
